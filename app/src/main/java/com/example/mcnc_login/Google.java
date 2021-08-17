@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
+import com.example.mcnc_login.data.Billiards;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -14,6 +15,8 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Google extends AppCompatActivity implements OnMapReadyCallback {
 
     private GoogleMap mMap;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,23 +33,14 @@ public class Google extends AppCompatActivity implements OnMapReadyCallback {
 
         mMap = googleMap;
 
-        LatLng SEOUL = new LatLng(37.56, 126.97);
+        LatLng BestBilliards = new LatLng(37.436131, 126.8819581);
 
         MarkerOptions markerOptions = new MarkerOptions();
-        markerOptions.position(SEOUL);
-        markerOptions.title("서울");
-        markerOptions.snippet("한국의 수도");
+        markerOptions.position(BestBilliards);
+        markerOptions.title("베스트 당구장");
+        markerOptions.snippet("경기도 광명시 기아로 22 (소하동,3층)");
         mMap.addMarker(markerOptions);
 
-
-        // 기존에 사용하던 다음 2줄은 문제가 있습니다.
-
-        // CameraUpdateFactory.zoomTo가 오동작하네요.
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(SEOUL));
-        //mMap.animateCamera(CameraUpdateFactory.zoomTo(10));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(SEOUL, 10));
-
-
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(BestBilliards, 15));
     }
-
 }

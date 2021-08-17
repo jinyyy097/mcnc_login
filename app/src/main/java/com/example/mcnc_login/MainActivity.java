@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
                         .addOnCompleteListener(MainActivity.this, new OnCompleteListener<AuthResult>() {
                             @Override
                             public void onComplete(@NonNull Task<AuthResult> task) {
+                                //로그인 성공시, class 호출
                                 if(task.isSuccessful()){
                                     Intent intent = new Intent(MainActivity.this, Google.class);
                                     startActivity(intent);
