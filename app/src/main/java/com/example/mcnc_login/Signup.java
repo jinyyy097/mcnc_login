@@ -27,7 +27,6 @@ public class Signup extends AppCompatActivity {
     Button btn_signup;
     private FirebaseAuth firebaseAuth;
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -92,15 +91,13 @@ public class Signup extends AppCompatActivity {
                                 mDialog.dismiss();
                                 Toast.makeText(Signup.this, "이미 존재하는 아이디 입니다.", Toast.LENGTH_SHORT).show();
                                 return;  //해당 메소드 진행을 멈추고 빠져나감.
-
                             }
-
                         }
                     });
 
-                    //비밀번호 오류시
-                } else {
-
+                }
+                //비밀번호 오류시,
+                else {
                     Toast.makeText(Signup.this, "비밀번호가 틀렸습니다. 다시 입력해 주세요.", Toast.LENGTH_SHORT).show();
                     return;
                 }
