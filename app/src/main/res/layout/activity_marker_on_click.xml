@@ -27,7 +27,7 @@
             android:fontFamily="@font/font_pretendard_bold"
             android:gravity="center"
             android:text="가게이름"
-            android:textColor="#000"
+            android:textColor="#283593"
             android:textSize="24dp"></TextView>
 
     </LinearLayout>
@@ -58,8 +58,8 @@
         android:layout_marginLeft="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="32dp"
-        android:background="@drawable/background_round"
+        android:layout_marginBottom="16dp"
+        android:background="#7986cb"
         android:orientation="horizontal">
 
         <TextView
@@ -67,12 +67,32 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/font_pretendard_regular"
+            android:gravity="center"
             android:padding="6dp"
             android:text="가게주소"
             android:textColor="#000"
-            android:gravity="center"
-            android:textSize="20dp"></TextView>
+            android:textSize="18dp"></TextView>
 
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_address"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_app_intent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:backgroundTint="#7986cb"
+            android:fontFamily="@font/font_pretendard_regular"
+            android:text="화면전환"
+            android:textColor="#000"
+            android:textSize="18dp"></Button>
     </LinearLayout>
 
 </RelativeLayout>

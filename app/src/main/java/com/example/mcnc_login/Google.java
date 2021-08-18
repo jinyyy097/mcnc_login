@@ -64,7 +64,7 @@ public class Google extends AppCompatActivity implements OnMapReadyCallback{
             mMap.addMarker(markerOptions);
         }
 
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LocationBilliards.get(0), 12));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LocationBilliards.get(0), 15));
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
                 @Override
                 public void onInfoWindowClick(@NonNull Marker marker) {
