@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Mcnc_login">
         <activity
+            android:name=".SplashActivity"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MarkerOnClick"
+            android:exported="true" />
+        <activity
             android:name=".Google"
             android:exported="true" />
         <activity
@@ -18,16 +30,11 @@
         <activity
             android:name=".MainActivity"
             android:exported="true">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyC4G0fOnI5DIC4ftlR_1HKkce5qypgOZVE"></meta-data>
+            android:value="AIzaSyC4G0fOnI5DIC4ftlR_1HKkce5qypgOZVE" />
     </application>
 
 </manifest>

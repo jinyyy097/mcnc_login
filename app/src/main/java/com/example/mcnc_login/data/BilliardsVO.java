@@ -1,6 +1,8 @@
 package com.example.mcnc_login.data;
 
-public class Billiards {
+import androidx.annotation.NonNull;
+
+public class BilliardsVO {
     private String BIZPLC_NM;
     private String REFINE_WGS84_LOGT;
     private String REFINE_ZIP_CD;
@@ -20,6 +22,33 @@ public class Billiards {
     private String BSN_STATE_NM;
     private String LICENSG_DE;
     private String REFINE_WGS84_LAT;
+
+    @NonNull
+    @Override
+    public String toString() {
+        return
+                "Billiards{" +
+                        "BIZPLC_NM='" + BIZPLC_NM + '\'' +
+                        ", REFINE_WGS84_LOGT='" + REFINE_WGS84_LOGT + '\'' +
+                        ", REFINE_ZIP_CD='" + REFINE_ZIP_CD + '\'' +
+                        ", REFINE_ROADNM_ADDR='" + REFINE_ROADNM_ADDR + '\'' +
+                        ", REFINE_LOTNO_ADDR='" + REFINE_LOTNO_ADDR + '\'' +
+                        ", MBER_RECRUT_TOT_PSNNUM_CNT=" + MBER_RECRUT_TOT_PSNNUM_CNT +
+                        ", LEADER_CNT='" + LEADER_CNT + '\'' +
+                        ", DETAIL_INDUTYPE_NM='" + DETAIL_INDUTYPE_NM + '\'' +
+                        ", PLOT_AR='" + PLOT_AR + '\'' +
+                        ", COPRTN_NM='" + COPRTN_NM + '\'' +
+                        ", CULTUR_PHSTRN_INDUTYPE_NM='" + CULTUR_PHSTRN_INDUTYPE_NM + '\'' +
+                        ", PLVTINST_DIV_NM='" + PLVTINST_DIV_NM + '\'' +
+                        ", BULDNG_TOT_AR=" + BULDNG_TOT_AR +
+                        ", BULDNG_BUILDG_CNT='" + BULDNG_BUILDG_CNT + '\'' +
+                        ", LOCPLC_AR='" + LOCPLC_AR + '\'' +
+                        ", CLSBIZ_DE='" + CLSBIZ_DE + '\'' +
+                        ", BSN_STATE_NM=" + BSN_STATE_NM +
+                        ", LICENSG_DE='" + LICENSG_DE + '\'' +
+                        ", REFINE_WGS84_LAT='" + REFINE_WGS84_LAT + '\'' +
+                        '}';
+    }
 
     public String getBIZPLC_NM() {
         return BIZPLC_NM;

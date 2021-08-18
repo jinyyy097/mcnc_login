@@ -30,6 +30,7 @@
         android:ems="16"
         android:fontFamily="@font/font_pretendard_regular"
         android:hint="비밀번호"
+        android:inputType="textPassword"
         android:padding="8dp"
         android:textSize="16dp" />
 
@@ -42,6 +43,7 @@
         android:ems="16"
         android:fontFamily="@font/font_pretendard_regular"
         android:hint="비밀번호 확인"
+        android:inputType="textPassword"
         android:padding="8dp"
         android:textSize="16dp" />
 
