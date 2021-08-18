@@ -13,6 +13,7 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
@@ -59,6 +60,7 @@ public class Google extends AppCompatActivity implements OnMapReadyCallback{
             markerOptions.position(LocationBilliards.get(i));
             markerOptions.title(BilliardsVO.get(i).getBIZPLC_NM());
             markerOptions.snippet(BilliardsVO.get(i).getREFINE_ROADNM_ADDR());
+            markerOptions.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE));
             mMap.addMarker(markerOptions);
         }
 
@@ -76,7 +78,6 @@ public class Google extends AppCompatActivity implements OnMapReadyCallback{
                         startActivity(intent);
                     }
                 }
-
             }
         });
 
@@ -103,7 +104,6 @@ public class Google extends AppCompatActivity implements OnMapReadyCallback{
             while (index < jsonArray.length()) {
                 BilliardsVO billiardsVO = gson.fromJson(jsonArray.get(index).toString(), BilliardsVO.class);
                 list_BilliardsVO.add(billiardsVO);
-
 
                 index++;
             }

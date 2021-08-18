@@ -24,7 +24,7 @@
             android:id="@+id/marker_title"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:fontFamily="@font/font_pretendard_regular"
+            android:fontFamily="@font/font_pretendard_bold"
             android:gravity="center"
             android:text="title"
             android:textColor="#000"
@@ -37,17 +37,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/layout_top"
-        android:layout_margin="32dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginBottom="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
         android:gravity="center"
         android:orientation="vertical">
 
         <ImageView
-            android:layout_width="120dp"
-            android:layout_height="120dp"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
             android:src="@drawable/billiard"></ImageView>
     </LinearLayout>
 

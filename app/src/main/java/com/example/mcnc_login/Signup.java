@@ -80,7 +80,6 @@ public class Signup extends AppCompatActivity {
                                 DatabaseReference reference = database.getReference("Users");
                                 reference.child(uid).setValue(hashMap);
 
-
                                 //가입이 이루어져을시 가입 화면을 빠져나감.
                                 Intent intent = new Intent(Signup.this, MainActivity.class);
                                 startActivity(intent);
@@ -94,7 +93,6 @@ public class Signup extends AppCompatActivity {
                             }
                         }
                     });
-
                 }
                 //비밀번호 오류시,
                 else {
@@ -103,7 +101,6 @@ public class Signup extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     public boolean onSupportNavigateUp() {
