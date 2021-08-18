@@ -19,12 +19,6 @@ public class SplashActivity extends AppCompatActivity {
         setContentView(R.layout.activity_splash);
 
         startSplash();
-//
-//        animationView = findViewById(R.id.lottie);
-//        animationView.setAnimation("loading.json");
-//        animationView.loop(true);
-//        animationView.playAnimation();
-
 
     }
 

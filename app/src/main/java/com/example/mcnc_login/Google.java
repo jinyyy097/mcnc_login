@@ -66,21 +66,21 @@ public class Google extends AppCompatActivity implements OnMapReadyCallback{
 
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(LocationBilliards.get(0), 12));
         mMap.setOnInfoWindowClickListener(new GoogleMap.OnInfoWindowClickListener() {
-            @Override
-            public void onInfoWindowClick(@NonNull Marker marker) {
-                for(int i=0;i<BilliardsVO.size();i++)
-                {
-                    if(marker.getTitle().equals(BilliardsVO.get(i).getBIZPLC_NM()))
+                @Override
+                public void onInfoWindowClick(@NonNull Marker marker) {
+                    for(int i=0; i<BilliardsVO.size(); i++)
                     {
-                        Intent intent = new Intent(getApplicationContext().getApplicationContext(), MarkerOnClick.class);
-                        intent.putExtra("marker_title", BilliardsVO.get(i).getBIZPLC_NM());
-                        intent.putExtra("marker_address", BilliardsVO.get(i).getREFINE_ROADNM_ADDR());
-                        startActivity(intent);
+                        if(marker.getTitle().equals(BilliardsVO.get(i).getBIZPLC_NM()))
+                        {
+                            Intent intent = new Intent(getApplicationContext().getApplicationContext(), MarkerOnClick.class);
+
+                            intent.putExtra("marker_title", BilliardsVO.get(i).getBIZPLC_NM());
+                            intent.putExtra("marker_address", BilliardsVO.get(i).getREFINE_ROADNM_ADDR());
+                            startActivity(intent);
+                        }
                     }
                 }
-            }
         });
-
     }
 
     private ArrayList<BilliardsVO> getBilliardsVO() {
@@ -97,7 +97,7 @@ public class Google extends AppCompatActivity implements OnMapReadyCallback{
             String json = new String(buffer, "UTF-8");
 
             JSONObject jsonObject = new JSONObject(json);
-            JSONArray jsonArray = jsonObject.getJSONArray("row");
+            JSONArray jsonArray = jsonObject.getJSONArray("row");//JSON KEY 값
 
             int index = 0;
 

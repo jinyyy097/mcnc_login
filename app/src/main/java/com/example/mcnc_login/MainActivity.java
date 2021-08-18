@@ -46,7 +46,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 //액티비티 함수 호출
                 startActivity(new Intent(MainActivity.this,Signup.class));
-
             }
         });
 
